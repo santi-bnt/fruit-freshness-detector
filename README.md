@@ -1,25 +1,38 @@
-Requisitos: Python 3.8+
+# Apple & Pear Detection (Freshness / Condition)
 
+A small **computer vision** project that classifies **apples** and **pears** into simple freshness/condition categories using **OpenCV + HSV color thresholds**.
 
-Instalación: crear (opcional) un entorno virtual, activarlo y ejecutar: pip install opencv-python numpy matplotlib
+- **Apple**: classifies based on red tones (fresh / ripening / rotten).
+- **Pear**: classifies based on detected **brown spots area (%)** (fresh / ripening / rotten).
 
+> Note: This is a lightweight, rule-based approach (not ML). Results depend a lot on lighting, camera, and background.
 
-Librerías usadas:
+---
 
+## Project structure
 
-OpenCV (cv2): cvtColor, inRange, bitwise_or, countNonZero
+- `manzana.py` → apple (manzana) classifier
+- `pera_function.py` → pear (pera) classifier
+- `main.py` → quick demo calls
+- Sample images:
+  - Apples: `manzana.jpg`, `manzana_not_fresh.jpg`, `manzana_podrida.jpg`
+  - Pears: `pera_fresca.jpg`, `pera_3.jpg`, `image.png`
 
+---
 
-NumPy (np): array para definir umbrales HSV
+## Requirements
 
+- Python **3.8+**
+- Packages:
+  - `opencv-python`
+  - `numpy`
+  - `matplotlib`
 
-Matplotlib (plt): figure, imshow, title, axis("off")
+---
 
+## Installation
 
+(Optional) create and activate a virtual environment, then:
 
-
-Uso mínimo: cargar la imagen con OpenCV, pasar el arreglo a tu función y visualizar con Matplotlib.
-
-
-Notas rápidas: si aparece el error de cvtColor por “_src.empty()”, la imagen no se cargó (revisa ruta/nombre). Si los colores se ven raros al mostrar, convierte BGR→RGB al visualizar con Matplotlib usando cv2.cvtColor(..., COLOR_BGR2RGB).
-
+```bash
+pip install opencv-python numpy matplotlib
