@@ -7,7 +7,6 @@ A small **computer vision** project that classifies **apples** and **pears** int
 
 > Note: This is a lightweight, rule-based approach (not ML). Results depend a lot on lighting, camera, and background.
 
----
 
 ## Project structure
 
@@ -18,8 +17,6 @@ A small **computer vision** project that classifies **apples** and **pears** int
   - Apples: `manzana.jpg`, `manzana_not_fresh.jpg`, `manzana_podrida.jpg`
   - Pears: `pera_fresca.jpg`, `pera_3.jpg`, `image.png`
 
----
-
 ## Requirements
 
 - Python **3.8+**
@@ -28,7 +25,6 @@ A small **computer vision** project that classifies **apples** and **pears** int
   - `numpy`
   - `matplotlib`
 
----
 
 ## Installation
 
